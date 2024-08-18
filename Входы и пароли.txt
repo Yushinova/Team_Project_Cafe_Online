@@ -1,0 +1,9 @@
+//можно регистрировать или входить под созданным
+User - Client
+login(phone) Test
+password Test
+
+//нужно входить уже по созданному админу
+Admin
+login Admin1
+password admin1

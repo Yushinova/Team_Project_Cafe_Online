@@ -1,0 +1,75 @@
+﻿<Window x:Class="Admin.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Admin"
+        mc:Ignorable="d"
+              Title="RegistrationWindow" Height="350" Width="420">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Controls_styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <TextBlock Style="{StaticResource TextBlock_style}" Grid.Row="0" Text="Регистрация" VerticalAlignment="Center"
+                   Margin="20,0,0,0" FontWeight="Bold"/>
+            <!--<Button Width="15" Height="15" BorderBrush="{x:Null}" Margin="258,0,0,10">
+               <Button.Background>
+                   <ImageBrush ImageSource="/Windows/выход.png"/>
+               </Button.Background>
+           </Button>-->
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBlock Style="{StaticResource TextBlock_style}" Text="Логин"
+                       Margin="20,0,0,0" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="LoginText" Margin="85,0,0,0" Width="230" Height="20"
+                     VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource TextBlock_style}" Text="Пароль"
+           Margin="20,0,0,0" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="PasswordText" Margin="75,0,0,0" Width="230" Height="20"
+                     VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <TextBlock Style="{StaticResource TextBlock_style}" Text="Телефон кафе"
+Margin="20,0,0,0" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="PhoneText" Margin="17,0,0,0" Width="230" Height="20"
+                     VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="4">
+            <TextBlock Style="{StaticResource TextBlock_style}" Text="Название кафе"
+Margin="20,0,0,0" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="NameText" Margin="10,0,0,0" Width="230" Height="20"
+                     VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="5">
+            <TextBlock Style="{StaticResource TextBlock_style}" Text="Адрес кафе"
+Margin="20,0,0,0" VerticalAlignment="Center"/>
+            <TextBox x:Name="AddressText" Margin="40,0,0,0" Width="230" Height="40"
+                     VerticalAlignment="Bottom" TextWrapping="Wrap"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="6">
+            <TextBlock Style="{StaticResource TextBlock_style}" Text="Логотип"
+Margin="20,0,0,0" VerticalAlignment="Bottom"/>
+            <Button Style="{StaticResource Button_style}" x:Name="LogoButton" Height="20" Width="100" VerticalAlignment="Bottom"
+                    Margin="44,0,0,0" Content="загрузить" FontSize="12" Click="LogoButton_Click"/>
+            <Label x:Name="LogoLabel" Content="название файла" FontFamily="a_FuturaRound" VerticalAlignment="Bottom"
+                   Margin="10,0,0,0"/>
+        </StackPanel>
+        <Button x:Name="SaveButton" Style="{StaticResource Button_style}" Grid.Row="7" Content="Сохранить" Click="SaveButton_Click"/>
+    </Grid>
+</Window>
