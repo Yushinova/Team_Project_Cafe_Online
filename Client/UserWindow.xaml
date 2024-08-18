@@ -32,25 +32,25 @@
                 <RowDefinition/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
-            <TextBlock Style="{StaticResource TextBlock_style}" Grid.Row="0" Text="{Binding Path=Name}" VerticalAlignment="Center"
+            <TextBlock Style="{StaticResource TextBlock_style}" Grid.Row="0" Text="Мои данные" VerticalAlignment="Center"
                    Margin="20,0,0,0" FontWeight="Bold"/>
             <StackPanel Orientation="Horizontal" Grid.Row="1">
-                <TextBlock Style="{StaticResource TextBlock_style}" Text="Логин"
+                <TextBlock Style="{StaticResource TextBlock_style}" Text="Имя"
                        Margin="20,0,0,0" VerticalAlignment="Bottom"/>
-                <TextBox x:Name="LoginText" Margin="85,0,0,0" Width="230" Height="20"
-                     VerticalAlignment="Bottom" Text="{Binding Path=Phone}"/>
+                <TextBox x:Name="LoginText" Margin="105,0,0,0" Width="230" Height="20"
+                     VerticalAlignment="Bottom" Text="{Binding Path=Name_}"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Orientation="Horizontal">
-                <TextBlock Style="{StaticResource TextBlock_style}" Text="Пароль"
+                <TextBlock Style="{StaticResource TextBlock_style}" Text="Телефон"
                             Margin="20,0,0,0" VerticalAlignment="Bottom"/>
-                <TextBox x:Name="PasswordText" Margin="75,0,0,0" Width="230" Height="20"
-                        VerticalAlignment="Bottom" Text="{Binding Path= Password}"/>
+                <TextBox x:Name="PasswordText" Margin="65,0,0,0" Width="230" Height="20"
+                        VerticalAlignment="Bottom" Text="{Binding Path= Phone_}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="3">
                 <TextBlock Style="{StaticResource TextBlock_style}" Text="Адрес"
-                           Margin="20,0,0,0" VerticalAlignment="Center"/>
+                           Margin="20,0,0,0" VerticalAlignment="Bottom"/>
                 <TextBox x:Name="AddressText" Margin="85,0,0,0" Width="230" Height="40"
-                     VerticalAlignment="Bottom" TextWrapping="Wrap" Text="{Binding Path=Address }"/>
+                     VerticalAlignment="Bottom" TextWrapping="Wrap" Text="{Binding Path=Address_}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="4">
                 <Button x:Name="SaveButton" Style="{StaticResource Button_style}" Content="Сохранить"/>
